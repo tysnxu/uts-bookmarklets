@@ -1,4 +1,4 @@
-# review-bookmarklets
+# Review Edu Bookmarklets
 
 吼吼 大家好！
 
