@@ -1,5 +1,7 @@
 # Review Edu Bookmarklets
 
+# Slider Value Viewer
+
 吼吼 大家好！
 
 给大家分享一个最近写的 JS Bookmarklet，
