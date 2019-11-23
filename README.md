@@ -32,7 +32,7 @@ javascript:function E(){g = document.getElementsByClassName("ui-slider-handle ui
 -----------------------
 # GPA Calculator
 
-这个是在 one stop admin 网站上用的，在results页面无需等待，一键算出GPA。
+这个是在 [one stop admin](https://onestopadmin.uts.edu.au) 网站上用的，在results页面无需等待，一键算出GPA。
 （仅对一直在UTS的成绩有效，对于Diploma转过来的成绩无效）
 （未对挂科重修的成绩单做测试）
 
