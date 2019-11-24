@@ -42,3 +42,10 @@ javascript:function E(){g = document.getElementsByClassName("ui-slider-handle ui
 ```
 javascript:function E(){sub = document.getElementsByClassName("table table-bordered table-striped")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");sub_n = sub.length;n = 0;f = 0;for (a=0;a<sub.length;a++){console.log("---------------");console.log(sub[a].getElementsByTagName("td")[3].innerText);g = sub[a].getElementsByTagName("td")[6].innerText;if (g == "Fail") {n = 0.5;console.log("Failed Assessment");} else {if (g == "Pass") {console.log("pass, 1.5");n = 1.5;} else if (g == "Credit") {console.log("Credit, 2.5");n = 2.5;} else if (g == "Distinction") {console.log("Distinction, 3.5");n = 3.5;} else if (g == "High Distinction") {console.log("HD, 4");n = 4;}};console.log(f + " + " + n + " = " + (f + n));f += n;};console.log("---------------");console.log("GPA: " + (f/sub_n).toFixed(2));alert("GPA: " + (f/sub_n).toFixed(2));} E()
 ```
+
+下面这个是算所有成绩平均分的
+
+一样是在 one stop admin 上面用。
+```
+javascript:function E(){sub = document.getElementsByClassName("table table-bordered table-striped")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");sub_n = sub.length;d = 0;for (a = 0; a < sub.length; a++) {console.log("-----------------");console.log(sub[a].getElementsByTagName("td")[3].innerText);console.log(sub[a].getElementsByTagName("td")[6].innerText);if (sub[a].getElementsByTagName("td")[6].innerText == "Fail") {n = 0;sub_n = sub_n - 1;} else {if (a<8) {n = Number(document.getElementById("ctl00_Content_grdResultDetails_ctl0"+ (a+2) +"_lblMark").innerText)} else {n = Number(document.getElementById("ctl00_Content_grdResultDetails_ctl"+ (a+2) +"_lblMark").innerText)};if (n == 0) {g = sub[a].getElementsByTagName("td")[6].innerText;console.log("NO GRADE");if (g == "Pass") {console.log("pass");n = 50;} else if (g == "Credit") {console.log("Credit");n = 65;} else if (g == "Distinction") {console.log("Distinction");n = 75;} else if (g == "High Distinction") {console.log("HD");n = 85;}}};d += n;console.log(n + " / " + d + " / "+sub_n);};console.log("-----------------");console.log(d);alert("Average: "+(d/sub.length).toFixed(2));} E()
+```
