@@ -36,7 +36,7 @@ javascript:function E(){g = document.getElementsByClassName("ui-slider-handle ui
 这个是在 [one stop admin](https://onestopadmin.uts.edu.au) 网站上用的，在results页面无需等待，一键算出GPA。
 
 【旧版本 GPA 4分制】
-2020年的 7分制GPA 往下滑
+如果想要2020年的7分制GPA 往下滑
 
 （仅对一直在UTS的成绩有效，对于Diploma转过来的成绩无效）
 
