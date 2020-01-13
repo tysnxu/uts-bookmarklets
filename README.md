@@ -35,6 +35,9 @@ javascript:function E(){g = document.getElementsByClassName("ui-slider-handle ui
 
 这个是在 [one stop admin](https://onestopadmin.uts.edu.au) 网站上用的，在results页面无需等待，一键算出GPA。
 
+【旧版本 GPA 4分制】
+2020年的 7分制GPA 往下滑
+
 （仅对一直在UTS的成绩有效，对于Diploma转过来的成绩无效）
 
 （未对挂科重修的成绩单做测试）
@@ -42,6 +45,16 @@ javascript:function E(){g = document.getElementsByClassName("ui-slider-handle ui
 ```
 javascript:function E(){sub = document.getElementsByClassName("table table-bordered table-striped")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");sub_n = sub.length;n = 0;f = 0;for (a=0;a<sub.length;a++){console.log("---------------");console.log(sub[a].getElementsByTagName("td")[3].innerText);g = sub[a].getElementsByTagName("td")[6].innerText;if (g == "Fail") {n = 0.5;console.log("Failed Assessment");} else {if (g == "Pass") {console.log("pass, 1.5");n = 1.5;} else if (g == "Credit") {console.log("Credit, 2.5");n = 2.5;} else if (g == "Distinction") {console.log("Distinction, 3.5");n = 3.5;} else if (g == "High Distinction") {console.log("HD, 4");n = 4;}};console.log(f + " + " + n + " = " + (f + n));f += n;};console.log("---------------");console.log("GPA: " + (f/sub_n).toFixed(2));alert("GPA: " + (f/sub_n).toFixed(2));} E()
 ```
+
+【下面是新的7分制GPA】(2020 JAN 13 - 17:30) 
+
+刚刚收到学校升级GPA Scale的邮件，
+要把4分制的GPA改成7分制的，所以就有了下面更新的版本：
+
+```
+javascript:function E(){	sub = document.getElementsByClassName("table table-bordered table-striped")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr");sub_n = sub.length;n = 0;f = 0;for (a=0;a<sub.length;a++){console.log("---------------");console.log(sub[a].getElementsByTagName("td")[3].innerText);g = sub[a].getElementsByTagName("td")[6].innerText;if (g == "Fail") {n = 0;console.log("Failed Assessment");} else {if (g == "Pass") {console.log("pass, 4");n = 4;} else if (g == "Credit") {console.log("Credit, 5");n = 5;} else if (g == "Distinction") {console.log("Distinction, 6");n = 6;} else if (g == "High Distinction") {console.log("HD, 7");n = 7;}};console.log(f + " + " + n + " = " + (f + n));f += n;};console.log("---------------");console.log("GPA: " + (f/sub_n).toFixed(2));alert("GPA: " + (f/sub_n).toFixed(2));} E()
+```
+
 
 下面这个是算所有成绩平均分的
 
